@@ -542,7 +542,7 @@
 
     <section id="contact" class="section">
       <div class="shell contact">
-        <h2>Contact me</h2>
+        <h2>Contact us</h2>
         <p>Interested in Paradise Blue? Let’s Talk! Whether you’re curious about features, pricing, custom options, or booking a viewing — we’d love to hear from you.</p>
         <div class="contact-grid">
           <div class="contact-card">
@@ -732,6 +732,49 @@
 
   <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
   <!-- End Brevo Form -->
+  <script>
+    (() => {
+      const brevoForm = document.getElementById('sib-form');
+      if (!brevoForm) return;
+
+      const successMessage = document.getElementById('success-message');
+      const errorMessage = document.getElementById('error-message');
+      const submitButton = brevoForm.querySelector('button[type="submit"]');
+
+      const togglePanel = (panel, show) => {
+        if (!panel) return;
+        panel.style.display = show ? 'block' : 'none';
+      };
+
+      togglePanel(successMessage, false);
+      togglePanel(errorMessage, false);
+
+      brevoForm.addEventListener('submit', async event => {
+        event.preventDefault();
+        submitButton?.setAttribute('disabled', 'disabled');
+        togglePanel(successMessage, false);
+        togglePanel(errorMessage, false);
+
+        try {
+          const response = await fetch(brevoForm.action, {
+            method: 'POST',
+            mode: 'cors',
+            body: new FormData(brevoForm),
+          });
+
+          if (!response.ok) throw new Error('Network response was not ok');
+
+          brevoForm.reset();
+          togglePanel(successMessage, true);
+        } catch (error) {
+          console.error('Contact form submission failed:', error);
+          togglePanel(errorMessage, true);
+        } finally {
+          submitButton?.removeAttribute('disabled');
+        }
+      });
+    })();
+  </script>
   <script>
     (() => {
       const lightbox = document.getElementById('lightbox');
