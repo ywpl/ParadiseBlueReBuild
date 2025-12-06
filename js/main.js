@@ -197,7 +197,8 @@ $(document).ready(function () {
 		});
 	}
 
-	if (document.querySelector(".contact-form") || document.querySelector(".reviews-page__form")){
+        const legacyContactForm = document.querySelector(".contact-form .form-input");
+        if (legacyContactForm || document.querySelector(".reviews-page__form")){
 
 	const formItems = document.querySelectorAll(".form-input");
 
