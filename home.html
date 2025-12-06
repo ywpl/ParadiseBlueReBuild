@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradise Blue | Calm Ocean Home</title>
+  <link rel="stylesheet" href="./fonts/mplus1p/mplus1p.css">
+  <link rel="stylesheet" href="./fonts/ltr46/ltr46.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    :root {
+      --ocean-deep: #0c2f3a;
+      --ocean-mid: #1f6f8b;
+      --ocean-soft: #88d9e6;
+      --sand: #f5f1e3;
+      --foam: #f4fbff;
+    }
+
+    body {
+      font-family: 'M PLUS 1p', 'Arial', sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), rgba(0,0,0,0)) ,
+                  linear-gradient(180deg, var(--foam) 0%, #dceef5 40%, var(--sand) 100%);
+      color: #0b1f2a;
+      margin: 0;
+    }
+
+    a { color: var(--ocean-mid); }
+
+    header {
+      background: linear-gradient(135deg, rgba(12,47,58,0.85), rgba(31,111,139,0.7)), url('./img/photo/full-size/photo-3.jpg') center/cover;
+      color: #fff;
+      padding: 48px 20px 72px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    .shell {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: 'ltr46', sans-serif;
+      font-size: 28px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #e8f7ff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .hero {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px 0 24px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.18);
+      color: #e8f7ff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 14px;
+    }
+
+    .callout {
+      background: rgba(244, 251, 255, 0.8);
+      border-left: 4px solid var(--ocean-mid);
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      color: #0b1f2a;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: var(--ocean-deep);
+    }
+
+    .section p {
+      max-width: 900px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 26px;
+    }
+
+    .card {
+      background: #ffffffc7;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 14px 38px rgba(0,0,0,0.07);
+      border: 1px solid #e1f0f5;
+    }
+
+    .card strong { color: var(--ocean-mid); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .gallery-grid img, .gallery-grid video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+      border: 1px solid #d7ecf3;
+      background: #fff;
+    }
+
+    .gallery-grid video {
+      max-height: 220px;
+    }
+
+    .contact {
+      background: linear-gradient(180deg, rgba(136,217,230,0.3), rgba(12,47,58,0.05));
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .contact ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 17px;
+      flex-wrap: wrap;
+    }
+
+    .contact .label {
+      font-weight: 700;
+      color: var(--ocean-deep);
+      width: 100px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: #2f4858;
+      background: rgba(12,47,58,0.04);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="top-row">
+        <div class="brand">Paradise Blue</div>
+        <nav>
+          <ul>
+            <li><a href="#story">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hero">
+        <div>
+          <h1>A new style pontoon boat assembled in Bayswater</h1>
+          <div class="badge-row">
+            <span class="badge">Solar-regenerated power</span>
+            <span class="badge">Handcrafted in Western Australia</span>
+            <span class="badge">Designed for leisure cruising</span>
+          </div>
+          <p><strong>Welcome Aboard Paradise Blue</strong> — a modern pontoon boat designed and handcrafted in Bayswater, Western Australia. Combining innovation, comfort, and sustainability, Paradise Blue is more than just a boat — it's your floating escape.</p>
+          <p>Built for coastal cruising, river relaxation, and social adventures, Paradise Blue features a spacious layout, luxurious lounge seating, and cutting-edge technology powered by solar-regenerated batteries. It’s the perfect blend of style and performance. Proudly Australian design. Boldly redefining the future of pontoon boats.</p>
+        </div>
+        <div class="callout">
+          <p>Step into a new wave of leisure boating with Paradise Blue. We craft comfort, technology, and serenity so every voyage feels like drifting through calm ocean water.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="story" class="section">
+      <div class="shell">
+        <h2>The Paradise Blue story</h2>
+        <p>Paradise Blue is not just a boat — it's a revolution in leisure cruising. Crafted with care and innovation, this modern pontoon boat brings together sustainable technology, comfort, and versatility to deliver a truly elevated boating experience.</p>
+        <div class="cards">
+          <div class="card">
+            <strong>Innovation with ease</strong>
+            <p>Solar-regenerated batteries, intuitive controls, and a layout tuned for effortless days on the water.</p>
+          </div>
+          <div class="card">
+            <strong>Comfort that flows</strong>
+            <p>Generous lounge seating, smooth decks, and a serene color palette inspired by calm seas.</p>
+          </div>
+          <div class="card">
+            <strong>Built for gathering</strong>
+            <p>Whether it's river relaxation or coastal cruising, Paradise Blue is the floating escape built for friends and family.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section" style="background: linear-gradient(180deg, rgba(136,217,230,0.18), rgba(245,241,227,0.4));">
+      <div class="shell">
+        <h2>Gallery</h2>
+        <p>Welcome to the visual journey of Paradise Blue — where innovation meets relaxation on the water. Explore the photos and videos. Imagine the possibilities.</p>
+        <div class="gallery-grid">
+          <img src="./img/photo/thumb/photo-01-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-02-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-03-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-04-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-05-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-06-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-07-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-08-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-09-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-10-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-11-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-12-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-13-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-14-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-15-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-16-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-17-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-18-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-19-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-20-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-21-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-22-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-23-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-24-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-25-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-26-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-27-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-28-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-29-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-30-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <img src="./img/photo/thumb/photo-31-th.jpg" alt="Paradise Blue" title="Paradise Blue">
+          <video controls src="./video/clips/video-1.mp4" poster="./video/thumb/paradise-blue.jpg"></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="shell contact">
+        <h2>Contact me</h2>
+        <p>Interested in Paradise Blue? Let’s Talk! Whether you’re curious about features, pricing, custom options, or booking a viewing — we’d love to hear from you.</p>
+        <ul>
+          <li><span class="label">Email</span> <span>paradiseblue@calee.com.au</span></li>
+          <li><span class="label">Phone</span> <img src="./img/phone-img.jpg" alt="Our phone - double click to call" title="Our phone - double click to call" style="max-height:50px;border-radius:8px;box-shadow:0 8px 18px rgba(0,0,0,0.12);border:1px solid #d7ecf3;"></li>
+          <li><span class="label">Address</span> <span>Bayswater, Western Australia</span></li>
+          <li><span class="label">Facebook</span> <a href="https://www.facebook.com/profile.php?id=61575371807051" target="_blank" rel="nofollow noopener noreferrer">Follow on Facebook</a></li>
+          <li><span class="label">WhatsApp</span> <a href="https://wa.me/61419516972" target="_blank" rel="nofollow noopener noreferrer">Message on WhatsApp</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <p>Paradise Blue 2025-2026. All rights reserved ©.</p>
+    </div>
+  </footer>
+</body>
+</html>
